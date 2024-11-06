@@ -79,17 +79,17 @@ local theme = lush(function(injected_functions)
     --
     -- ColorColumn    { }, -- Columns set with 'colorcolumn'
     -- Conceal        { }, -- Placeholder characters substituted for concealed text (see 'conceallevel')
-    -- Cursor         { }, -- Character under the cursor
+    Cursor         { fg = palette.background }, -- Character under the cursor
     -- CurSearch      { }, -- Highlighting a search pattern under the cursor (see 'hlsearch')
     -- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
     -- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     -- CursorLine     { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     -- Directory      { }, -- Directory names (and other special names in listings)
-    -- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
-    -- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
-    -- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
-    -- DiffText       { }, -- Diff mode: Changed text within a changed line |diff.txt|
+    DiffAdd        { fg = palette.green }, -- Diff mode: Added line |diff.txt|
+    DiffChange     { fg = palette.blue }, -- Diff mode: Changed line |diff.txt|
+    DiffDelete     { fg = palette.red }, -- Diff mode: Deleted line |diff.txt|
+    DiffText       { fg = palette.rhino }, -- Diff mode: Changed text within a changed line |diff.txt|
     -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
@@ -112,8 +112,8 @@ local theme = lush(function(injected_functions)
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg        { }, -- |more-prompt|
     NonText        { bg = palette.background, fg = palette.paper }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    Normal         { bg = palette.background, fg = palette.paper }, -- Normal text
-    NormalFloat    { bg = palette.background, fg = palette.paper }, -- Normal text in floating windows.
+    Normal         { bg = palette.background, fg = palette.rhino }, -- Normal text
+    NormalFloat    { bg = palette.background, fg = palette.rhino }, -- Normal text in floating windows.
     -- FloatBorder    { }, -- Border of floating windows.
     -- FloatTitle     { }, -- Title of floating windows.
     NormalNC       { bg = palette.background, fg = palette.paper }, -- normal text in non-current windows
@@ -158,17 +158,17 @@ local theme = lush(function(injected_functions)
 
     Comment        { fg = palette.rhino , italic = true}, -- Any comment
 
-    -- Constant       { }, -- (*) Any constant
-    -- String         { }, --   A string constant: "this is a string"
+    Constant       { fg = palette.very_light_rhino }, -- (*) Any constant
+    String         { fg = palette.rhino, italic = true }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     -- Number         { }, --   A number constant: 234, 0xff
     -- Boolean        { }, --   A boolean constant: TRUE, false
     -- Float          { }, --   A floating point constant: 2.3e10
 
-    -- Identifier     { }, -- (*) Any variable name
-    -- Function       { }, --   Function name (also: methods for classes)
+    Identifier     { fg = palette.paper }, -- (*) Any variable name
+    Function       { fg = palette.light_rhino}, --   Function name (also: methods for classes)
 
-    -- Statement      { }, -- (*) Any statement
+    Statement      { fg = palette.light_rhino, bold = true,}, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
@@ -176,25 +176,25 @@ local theme = lush(function(injected_functions)
     -- Keyword        { }, --   any other keyword
     -- Exception      { }, --   try, catch, throw
 
-    -- PreProc        { }, -- (*) Generic Preprocessor
+    PreProc        { fg = palette.red, italic = true }, -- (*) Generic Preprocessor
     -- Include        { }, --   Preprocessor #include
     -- Define         { }, --   Preprocessor #define
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    -- Type           { }, -- (*) int, long, char, etc.
+    Type           { fg = palette.rhino }, -- (*) int, long, char, etc.
     -- StorageClass   { }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
-    -- Special        { }, -- (*) Any special symbol
+    Special        { fg = palette.rhino }, -- (*) Any special symbol
     -- SpecialChar    { }, --   Special character in a constant
     -- Tag            { }, --   You can use CTRL-] on this
     -- Delimiter      { }, --   Character that needs attention
     -- SpecialComment { }, --   Special things inside a comment (e.g. '\n')
     -- Debug          { }, --   Debugging statements
 
-    -- Underlined     { gui = "underline" }, -- Text that stands out, HTML links
+    Underlined     { gui = "underline", fg = palette.red }, -- Text that stands out, HTML links
     -- Ignore         { }, -- Left blank, hidden |hl-Ignore| (NOTE: May be invisible here in template)
     -- Error          { }, -- Any erroneous construct
     -- Todo           { }, -- Anything that needs extra attention; mostly the keywords TODO FIXME and XXX
