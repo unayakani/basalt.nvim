@@ -43,11 +43,27 @@
 --  `:lua require('lush').ify()`
 
 local lush = require('lush')
-local hsl = lush.hsl
+-- local hsl = lush.hsl
 
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
+
+local palette = {
+  black            = "#000000",
+  background       = "#101010",
+  rock             = "#4d4d4d",
+  rhino            = "#808080",
+  light_rhino      = "#b4b4b4",
+  very_light_rhino = "#d5d5d5",
+  paper            = "#f0f0f0",
+  white            = "#ffffff",
+  red              = "#fb4631",
+  green            = "#c4c728",
+  yellow           = "#fabe33",
+  blue             = "#48acb4",
+}
+
 local theme = lush(function(injected_functions)
   local sym = injected_functions.sym
   return {
@@ -77,7 +93,7 @@ local theme = lush(function(injected_functions)
     -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
-    -- ErrorMsg       { }, -- Error messages on the command line
+    ErrorMsg       { fg = palette.red }, -- Error messages on the command line
     -- VertSplit      { }, -- Column separating vertically split windows
     -- Folded         { }, -- Line used for closed folds
     -- FoldColumn     { }, -- 'foldcolumn'
@@ -95,12 +111,12 @@ local theme = lush(function(injected_functions)
     -- MsgArea        { }, -- Area for messages and cmdline
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg        { }, -- |more-prompt|
-    -- NonText        { }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
-    -- Normal         { }, -- Normal text
-    -- NormalFloat    { }, -- Normal text in floating windows.
+    NonText        { bg = palette.background, fg = palette.paper }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    Normal         { bg = palette.background, fg = palette.paper }, -- Normal text
+    NormalFloat    { bg = palette.background, fg = palette.paper }, -- Normal text in floating windows.
     -- FloatBorder    { }, -- Border of floating windows.
     -- FloatTitle     { }, -- Title of floating windows.
-    -- NormalNC       { }, -- normal text in non-current windows
+    NormalNC       { bg = palette.background, fg = palette.paper }, -- normal text in non-current windows
     -- Pmenu          { }, -- Popup menu: Normal item.
     -- PmenuSel       { }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
@@ -140,7 +156,7 @@ local theme = lush(function(injected_functions)
     --
     -- Uncomment and edit if you want more specific syntax highlighting.
 
-    -- Comment        { }, -- Any comment
+    Comment        { fg = palette.rhino , italic = true}, -- Any comment
 
     -- Constant       { }, -- (*) Any constant
     -- String         { }, --   A string constant: "this is a string"
@@ -223,7 +239,7 @@ local theme = lush(function(injected_functions)
     -- DiagnosticSignInfo         { } , -- Used for "Info" signs in sign column.
     -- DiagnosticSignHint         { } , -- Used for "Hint" signs in sign column.
     -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
-
+    --
     -- Tree-Sitter syntax groups.
     --
     -- See :h treesitter-highlight-groups, some groups may not be listed,
@@ -289,7 +305,4 @@ local theme = lush(function(injected_functions)
 }
 end)
 
--- Return our parsed theme for extension or use elsewhere.
 return theme
-
--- vi:nowrap
