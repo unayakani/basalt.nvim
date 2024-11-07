@@ -23,13 +23,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.65767856"
-     inkscape:cx="321.58567"
-     inkscape:cy="637.84959"
-     inkscape:window-width="2542"
-     inkscape:window-height="1386"
+     inkscape:zoom="0.23252448"
+     inkscape:cx="621.43993"
+     inkscape:cy="1047.2015"
+     inkscape:window-width="1316"
+     inkscape:window-height="660"
      inkscape:window-x="7"
-     inkscape:window-y="7"
+     inkscape:window-y="733"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      showborder="false" />
@@ -40,10 +40,10 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#666666;fill-opacity:1;stroke-width:1.80542;stroke-dasharray:7.22166, 7.22166"
+       style="fill:#666666;fill-opacity:1;stroke-width:2.08129;stroke-dasharray:8.32512, 8.32512"
        id="rect25"
        width="315.8046"
-       height="325.16092"
+       height="432.12097"
        x="-96.551727"
        y="0"
        inkscape:export-filename="swatch.png"
@@ -276,5 +276,23 @@
          style="fill:#ffffff;fill-opacity:1;stroke-width:0.335263"
          x="80.150826"
          y="296.87244">fabe33</tspan></text>
+    <rect
+       style="fill:#8c92aa;fill-opacity:1;stroke-width:1.45962;stroke-dasharray:5.83847, 5.83847"
+       id="rect11"
+       width="50.430321"
+       height="50.430321"
+       x="36.13541"
+       y="336.58423" />
+    <text
+       xml:space="preserve"
+       style="font-size:13.0611px;line-height:normal;font-family:Roboto;-inkscape-font-specification:'Roboto, Normal';text-align:start;text-decoration-color:#000000;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:0.335263;stroke-dasharray:1.34105, 1.34105"
+       x="39.360981"
+       y="407.05481"
+       id="text17"><tspan
+         sodipodi:role="line"
+         id="tspan17"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.335263"
+         x="39.360981"
+         y="407.05481">8c92aa</tspan></text>
   </g>
 </svg>
