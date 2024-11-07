@@ -58,11 +58,11 @@ local palette = {
   very_light_rhino = "#d5d5d5",
   paper            = "#f0f0f0",
   white            = "#ffffff",
-  red              = "#fb4631",
-  green            = "#c4c728",
-  yellow           = "#fabe33",
-  blue             = "#48acb4",
   stone            = "#b4bed8",
+  red              = "#ff7060",
+  green            = "#8cdd55",
+  yellow           = "#ffee6d",
+  blue             = "#77cdee",
 }
 
 local theme = lush(function(injected_functions)
@@ -215,30 +215,30 @@ local theme = lush(function(injected_functions)
 
     -- See :h diagnostic-highlights, some groups may not be listed, submit a PR fix to lush-template!
     --
-    -- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    -- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    -- DiagnosticInfo             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    -- DiagnosticHint             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticError            { fg = palette.red } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticWarn             { fg = palette.yellow } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticInfo             { fg = palette.blue } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+    DiagnosticHint             { fg = palette.yellow } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
     -- DiagnosticOk               { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
-    -- DiagnosticVirtualTextError { } , -- Used for "Error" diagnostic virtual text.
-    -- DiagnosticVirtualTextWarn  { } , -- Used for "Warn" diagnostic virtual text.
-    -- DiagnosticVirtualTextInfo  { } , -- Used for "Info" diagnostic virtual text.
-    -- DiagnosticVirtualTextHint  { } , -- Used for "Hint" diagnostic virtual text.
+    DiagnosticVirtualTextError { fg = palette.red } , -- Used for "Error" diagnostic virtual text.
+    DiagnosticVirtualTextWarn  { fg = palette.yellow } , -- Used for "Warn" diagnostic virtual text.
+    DiagnosticVirtualTextInfo  { fg = palette.blue } , -- Used for "Info" diagnostic virtual text.
+    DiagnosticVirtualTextHint  { fg = palette.yellow } , -- Used for "Hint" diagnostic virtual text.
     -- DiagnosticVirtualTextOk    { } , -- Used for "Ok" diagnostic virtual text.
-    -- DiagnosticUnderlineError   { } , -- Used to underline "Error" diagnostics.
-    -- DiagnosticUnderlineWarn    { } , -- Used to underline "Warn" diagnostics.
-    -- DiagnosticUnderlineInfo    { } , -- Used to underline "Info" diagnostics.
-    -- DiagnosticUnderlineHint    { } , -- Used to underline "Hint" diagnostics.
+    DiagnosticUnderlineError   { fg = palette.red } , -- Used to underline "Error" diagnostics.
+    DiagnosticUnderlineWarn    { fg = palette.yellow } , -- Used to underline "Warn" diagnostics.
+    DiagnosticUnderlineInfo    { fg = palette.blue } , -- Used to underline "Info" diagnostics.
+    DiagnosticUnderlineHint    { fg = palette.yellow } , -- Used to underline "Hint" diagnostics.
     -- DiagnosticUnderlineOk      { } , -- Used to underline "Ok" diagnostics.
-    -- DiagnosticFloatingError    { } , -- Used to color "Error" diagnostic messages in diagnostics float. See |vim.diagnostic.open_float()|
-    -- DiagnosticFloatingWarn     { } , -- Used to color "Warn" diagnostic messages in diagnostics float.
-    -- DiagnosticFloatingInfo     { } , -- Used to color "Info" diagnostic messages in diagnostics float.
-    -- DiagnosticFloatingHint     { } , -- Used to color "Hint" diagnostic messages in diagnostics float.
+    DiagnosticFloatingError    { fg = palette.red } , -- Used to color "Error" diagnostic messages in diagnostics float. See |vim.diagnostic.open_float()|
+    DiagnosticFloatingWarn     { fg = palette.yellow } , -- Used to color "Warn" diagnostic messages in diagnostics float.
+    DiagnosticFloatingInfo     { fg = palette.blue } , -- Used to color "Info" diagnostic messages in diagnostics float.
+    DiagnosticFloatingHint     { fg = palette.yellow } , -- Used to color "Hint" diagnostic messages in diagnostics float.
     -- DiagnosticFloatingOk       { } , -- Used to color "Ok" diagnostic messages in diagnostics float.
-    -- DiagnosticSignError        { } , -- Used for "Error" signs in sign column.
-    -- DiagnosticSignWarn         { } , -- Used for "Warn" signs in sign column.
-    -- DiagnosticSignInfo         { } , -- Used for "Info" signs in sign column.
-    -- DiagnosticSignHint         { } , -- Used for "Hint" signs in sign column.
+    DiagnosticSignError        { fg = palette.red } , -- Used for "Error" signs in sign column.
+    DiagnosticSignWarn         { fg = palette.yellow } , -- Used for "Warn" signs in sign column.
+    DiagnosticSignInfo         { fg = palette.blue } , -- Used for "Info" signs in sign column.
+    DiagnosticSignHint         { fg = palette.yellow } , -- Used for "Hint" signs in sign column.
     -- DiagnosticSignOk           { } , -- Used for "Ok" signs in sign column.
     --
     -- Custom syntax groups (related to plugins)
