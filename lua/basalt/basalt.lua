@@ -62,7 +62,7 @@ local palette = {
   green            = "#c4c728",
   yellow           = "#fabe33",
   blue             = "#48acb4",
-  stone            = "#8c92aa",
+  stone            = "#b4bed8",
 }
 
 local theme = lush(function(injected_functions)
