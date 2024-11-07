@@ -162,8 +162,8 @@ local theme = lush(function(injected_functions)
     String         { fg = palette.rhino, italic = true }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     Number         { fg = palette.paper }, --   A number constant: 234, 0xff
-    Boolean        { fg = palette.blue }, --   A boolean constant: TRUE, false
-    -- Float          { }, --   A floating point constant: 2.3e10
+    Boolean        { fg = "8C92AA" }, --   A boolean constant: TRUE, false
+    Float          { fg = palette.paper }, --   A floating point constant: 2.3e10
 
     Identifier     { fg = palette.paper }, -- (*) Any variable name
     Function       { fg = palette.light_rhino}, --   Function name (also: methods for classes)
