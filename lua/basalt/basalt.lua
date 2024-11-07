@@ -169,11 +169,11 @@ local theme = lush(function(injected_functions)
     Function       { fg = palette.light_rhino}, --   Function name (also: methods for classes)
 
     Statement      { fg = palette.light_rhino }, -- (*) Any statement
-    Conditional    { italic = true }, --   if, then, else, endif, switch, etc.
-    Repeat         { italic = true }, --   for, do, while, etc.
+    Conditional    { fg = palette.light_rhino, italic = true }, --   if, then, else, endif, switch, etc.
+    Repeat         { fg = palette.light_rhino, italic = true }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
     -- Operator       { }, --   "sizeof", "+", "*", etc.
-    Keyword        { italic = true }, --   any other keyword
+    Keyword        { fg = palette.light_rhino, italic = true }, --   any other keyword
     -- Exception      { }, --   try, catch, throw
 
     PreProc        { fg = palette.red, italic = true }, -- (*) Generic Preprocessor
