@@ -168,7 +168,7 @@ local theme = lush(function(injected_functions)
     Identifier     { fg = palette.paper }, -- (*) Any variable name
     Function       { fg = palette.light_rhino}, --   Function name (also: methods for classes)
 
-    Statement      { fg = palette.light_rhino, bold = true,}, -- (*) Any statement
+    Statement      { fg = palette.light_rhino, italic = true,}, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
