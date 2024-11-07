@@ -160,10 +160,10 @@ local theme = lush(function(injected_functions)
     Comment        { fg = palette.rhino , italic = true}, -- Any comment
 
     Constant       { fg = palette.very_light_rhino }, -- (*) Any constant
-    String         { fg = palette.paper, italic = true }, --   A string constant: "this is a string"
+    String         { fg = palette.yellow, italic = true }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     Number         { fg = palette.paper }, --   A number constant: 234, 0xff
-    Boolean        { fg = palette.stone }, --   A boolean constant: TRUE, false
+    Boolean        { fg = palette.yellow }, --   A boolean constant: TRUE, false
     Float          { fg = palette.paper }, --   A floating point constant: 2.3e10
 
     Identifier     { fg = palette.paper }, -- (*) Any variable name
