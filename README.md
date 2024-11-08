@@ -3,6 +3,8 @@ A dark colorscheme for Neovim written using [lush.nvim](https://github.com/rktjm
 
 ![preview](media/preview.png)
 
+![swatch](media/swatch.png)
+
 ## Installation
 Using lazy.nvim
 ```lua
