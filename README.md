@@ -3,7 +3,7 @@ A dark colorscheme for Neovim written using [lush.nvim](https://github.com/rktjm
 
 ![preview](media/preview.png)
 
-<img src="media/swatch.png" width="700">
+<img src="media/swatch.png" width="600">
 
 ## Installation
 Using lazy.nvim
