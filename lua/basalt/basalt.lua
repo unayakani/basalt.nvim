@@ -60,8 +60,6 @@ local palette = {
   white            = "#ffffff",
   red              = "#ff7060",
   green            = "#8cdd55",
-  -- yellow           = "#ffee6d",
-  -- yellow           = "#e6e47a",
   yellow           = "#f7f469",
   blue             = "#77cdee",
 }
@@ -161,7 +159,7 @@ local theme = lush(function(injected_functions)
     Comment        { fg = palette.rhino , italic = true}, -- Any comment
 
     Constant       { fg = palette.very_light_rhino }, -- (*) Any constant
-    String         { fg = palette.yellow, italic = true }, --   A string constant: "this is a string"
+    String         { fg = palette.white, italic = true }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     Number         { fg = palette.paper }, --   A number constant: 234, 0xff
     Boolean        { fg = palette.light_rhino }, --   A boolean constant: TRUE, false
